@@ -22,11 +22,6 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 //ROUTE
-app.use("/", (req, res) => {
-  res.json({
-    status: "You are authorized.Good Work",
-  });
-});
 app.use("/user", userRouter);
 app.use("/badges", badgeRouter);
 //LISTENING BY SERVER
