@@ -24,7 +24,7 @@ app.use(cors(corsOptions));
 //ROUTE
 app.use("/", (req, res) => {
   res.json({
-    status: "You are authorized",
+    status: "You are authorized.Good Work",
   });
 });
 app.use("/user", userRouter);
