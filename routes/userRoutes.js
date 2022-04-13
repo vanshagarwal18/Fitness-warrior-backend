@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.post("/signup", authController.signup);
 router.post("/login", authController.login);
-router.get("/test", authController.protect, (req, res) => {
+router.get("/test", (req, res) => {
   res.json({
     status: "You are authorized",
   });
