@@ -23,6 +23,9 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 //ROUTE
+app.use("/", (req, res) => {
+  console.log("Hello from backend");
+});
 app.use("/user", userRouter);
 app.use("/badges", badgeRouter);
 
