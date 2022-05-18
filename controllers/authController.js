@@ -86,7 +86,7 @@ exports.protect = async (req, res, next) => {
 
     token = req.body.token;
 
-    // console.log(token);/
+  
     if (!token) {
       res.json({
         status: "error",
