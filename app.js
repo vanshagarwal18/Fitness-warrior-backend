@@ -6,6 +6,7 @@ const cors = require("cors");
 const app = express();
 const userRouter = require("./routes/userRoutes");
 const badgeRouter = require("./routes/badgeRoutes");
+
 //BODY-PARSER
 app.use(express.json());
 
@@ -24,6 +25,7 @@ app.use(cors(corsOptions));
 //ROUTE
 app.use("/user", userRouter);
 app.use("/badges", badgeRouter);
+
 //LISTENING BY SERVER
 const PORT = process.env.PORT;
 const server = app.listen(PORT, () => {

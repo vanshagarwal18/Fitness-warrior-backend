@@ -173,7 +173,7 @@ exports.getbadge = (req, res, next) => {
       curr = req.user.badgeId.currentStreak;
     } else {
       max = 0;
-      mile = 0;
+      mile = 1;
       curr = 0;
     }
     res.json({
