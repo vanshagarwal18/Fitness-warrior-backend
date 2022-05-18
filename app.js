@@ -23,11 +23,12 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 //ROUTE
+
+app.use("/user", userRouter);
+app.use("/badges", badgeRouter);
 app.use("/", (req, res) => {
   res.json("Hello from backend");
 });
-app.use("/user", userRouter);
-app.use("/badges", badgeRouter);
 
 //LISTENING BY SERVER
 const PORT = process.env.PORT;
